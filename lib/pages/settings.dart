@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reminderwater_apss/pages/komentar.dart';
 import 'package:reminderwater_apss/theme/interval.dart';
 import 'package:reminderwater_apss/theme/mode.dart';
 import 'package:reminderwater_apss/theme/onoff.dart';
@@ -51,6 +52,16 @@ class SettingsPage extends StatelessWidget {
             ),
           ),
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Navigasi ke halaman komentar/masukan
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CommentPage()),
+          );
+        },
+        child: const Icon(Icons.comment),
       ),
     );
   }
